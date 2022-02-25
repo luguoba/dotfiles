@@ -1,0 +1,17 @@
+# mkinitcpio preset file for the 'linux-xanmod-edge' package
+
+ALL_config="/etc/mkinitcpio.conf"
+ALL_kver="/boot/vmlinuz-linux-xanmod-edge"
+ALL_microcode="/boot/intel-ucode.img"
+
+PRESETS=('default' 'fallback')
+
+#default_config="/etc/mkinitcpio.conf"
+default_image="/boot/initramfs-linux-xanmod-edge.img"
+default_efi_image="/boot/EFI/Linux/linux-xanmod-edge.efi"
+default_options="-S udev,modconf,block,filesystems,keyboard,fsck"
+
+#fallback_config="/etc/mkinitcpio.conf"
+fallback_image="/boot/initramfs-linux-xanmod-edge-fallback.img"
+fallback_efi_image="/boot/EFI/Linux/linux-xanmod-edge-fallback.efi"
+fallback_options="-S autodetect"

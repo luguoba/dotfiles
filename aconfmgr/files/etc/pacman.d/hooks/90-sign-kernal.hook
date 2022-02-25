@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux-xanmod-edge
+Target = systemd
+
+[Action]
+Description = Signing Kernel for SecureBoot
+When = PostTransaction
+Exec = /home/icey/.local/bin/script/signkernal
+Depends = sbsigntools

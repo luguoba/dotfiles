@@ -1,0 +1,24 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+INPUT_METHOD=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus
+
+QT_SELECT=5
+QT_QPA_PLATFORMTHEME=qt5ct
+
+GTK_USE_PORTAL=1
+
+EDITOR=nvim
+VISUAL=nvim
+PAGER=nvimpager
+DIFFPROG=nvimpager
+
+LANG=zh_CN.UTF-8
+LANGUAGE=zh_CN:en_US
