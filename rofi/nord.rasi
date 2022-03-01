@@ -45,6 +45,10 @@ configuration {
 
 window {
   transparency: "real";
+  border: 3px;
+  border-color: #b48ead;
+  border-radius: 5px;
+  width: 300px;
 }
 
 mainbox {
