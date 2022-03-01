@@ -2,8 +2,17 @@
 # VERSION: 3.0
 SETUVAR --export SXHKD_SHELL:/bin/sh
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_disable:systemctl\x20disable
+SETUVAR _fish_abbr_enable:systemctl\x20enable
 SETUVAR _fish_abbr_n:nvim
 SETUVAR _fish_abbr_r:ranger
+SETUVAR _fish_abbr_restart:systemctl\x20restart
+SETUVAR _fish_abbr_sart:systemctl\x20start
+SETUVAR _fish_abbr_sstaus:systemctl\x20status
+SETUVAR _fish_abbr_start:systemctl\x20start
+SETUVAR _fish_abbr_status:systemctl\x20status
+SETUVAR _fish_abbr_staus:systemctl\x20status
+SETUVAR _fish_abbr_stop:systemctl\x20stop
 SETUVAR _fish_abbr_v:source\x20/home/icey/\x2evenv/venv/bin/activate\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/icey/\x2econfig/fish/functions/fisher\x2efish\x1e/home/icey/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher

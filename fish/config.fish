@@ -9,12 +9,14 @@ if status is-login
   set -x npm_config_prefix '/home/icey/.npm/modules'
 
   set -x SXHKD_SHELL '/bin/sh'
+  set -x MOZ_USE_XINPUT2 1
+  set -x LIBVA_DRIVER_NAME iHD
 
   set -x EDITOR nvim
   set -x VISUAL nvim
   set -x PAGER nvimpager
   set -x DIFFPROG colordiff
-  set -x BROWSER brave
+  set -x BROWSER firefox
 
   if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
     exec startx -- vt1 &> /dev/null

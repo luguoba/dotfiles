@@ -19,6 +19,7 @@
 # Constants
 divider="---------"
 goback="Back"
+status=1
 
 # Checks if bluetooth controller is powered on
 power_on() {
@@ -181,7 +182,8 @@ toggle_trust() {
 
 # Prints a short string with the current bluetooth status
 # Useful for status bars like polybar, etc.
-print_status() {
+_print_status() {
+    status=1
     if power_on; then
         printf ''
 
@@ -199,12 +201,25 @@ print_status() {
                 fi
 
                 ((counter++))
+                status=2
             fi
         done
         printf " \n"
     else
         echo ""
     fi
+}
+
+print_status() {
+  while (( status > 0)); do
+    if (( status == 1 )); then
+      _print_status
+      sleep 1
+    elif (( status == 2 )); then
+      _print_status
+      sleep 3600
+    fi
+  done
 }
 
 # A submenu for a specific device that allows connecting, pairing, and trusting

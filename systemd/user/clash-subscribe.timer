@@ -1,0 +1,8 @@
+[Unit]
+Description=Update clash subscribe config yaml 5 days
+
+[Timer]
+OnUnitActiveSec=5d 
+
+[Install]
+WantedBy=timers.target

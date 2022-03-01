@@ -3,12 +3,10 @@
 super + Return
       kitty
 
-# ~/.local/bin/./st_settings && 
-
-super + @space
+super + space
       $HOME/.config/rofi/rofi-launcher.sh
 
-super + shift + l
+super + x
       betterlockscreen -l dimblur
       
 super + Tab

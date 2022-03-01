@@ -1,0 +1,7 @@
+[Unit]
+Description=Update clash subscribe config yaml
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/bin/bash /home/icey/.local/bin/script/subclash
