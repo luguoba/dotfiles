@@ -7,7 +7,7 @@ super + space
       $HOME/.config/rofi/rofi-launcher.sh
 
 super + x
-      betterlockscreen -l dimblur
+      i3lock-fancy -f Sarasa-Fixed-SC -t '-- OPEN YOUR COMPUTER --' -- maim
       
 super + Tab
       $HOME/.config/rofi/rofi-windows.sh
@@ -15,17 +15,19 @@ super + Tab
 # reload config (bspwmrc and sxhkdrc)  # 
 
 super + Esc
-	pkill -USR1 -x sxhkd 
+	pkill -USR1 -x sxhkd
+        bspc quit
+ 
 
 # ----------- Screenshot -------- #
 
-# take an area's screenshot and copy it to clipboard
+# take a screenshot and copy it to clipboard
 Print
-	maim -s | xclip -selection clipboard -t image/png
+	maim | xclip -selection clipboard -t image/png
 
-#take an area's screenshot than save it to ~/Pictures
+#take a screenshot than save it to ~/Pictures
 shift + Print
-	maim -s ~/Pictures/$(date +%s).png
+	maim ~/Pictures/$(date +%s).png
 
 # take a window's screenshot and copy it to clipboard
 alt + Print

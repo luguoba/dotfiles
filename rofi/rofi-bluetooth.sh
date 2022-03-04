@@ -214,10 +214,12 @@ print_status() {
   while (( status > 0)); do
     if (( status == 1 )); then
       _print_status
-      sleep 1
+      sleep 1 &
+      wait
     elif (( status == 2 )); then
       _print_status
-      sleep 3600
+      sleep 3600 &
+      wait
     fi
   done
 }

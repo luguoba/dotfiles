@@ -2,6 +2,8 @@ if status is-login
   
   fish_add_path -p /home/icey/.local/bin/script /home/icey/.local/bin /home/icey/.npm/modules/bin
 
+  set -x SSH_AUTH_SOCK '/run/user/1000/ssh-agent'
+
   set -x _ZO_DATA_DIR $HOME/.local/share 
   set -x _ZO_ECHO 1 
   set -x _ZO_RESOLVE_SYMLINKS 1 

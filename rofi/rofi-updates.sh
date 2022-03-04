@@ -1,8 +1,17 @@
 #!/usr/bin/bash
 
-NOTIFY_ICON=/usr/share/icons/Qogir-dark/32x32/apps/system-software-update.svg
+NOTIFY_ICON=/usr/share/icons/Flatery-Dark/apps/48/system-software-update.svg
 
-get_total_updates() { UPDATES=$(checkupdates 2>/dev/null | wc -l); }
+get_total_updates() { 
+  # UPDATES=$(checkupdates 2>/dev/null | wc -l); 
+  if ! updates_arch=$(checkupdates 2> /dev/null | wc -l ); then
+    updates_arch=0
+  fi
+  if ! updates_aur=$(yay -Qum 2> /dev/null | wc -l); then
+    updates_aur=0
+  fi
+  UPDATES=$((updates_arch + updates_aur))
+}
 
 while true; do
     get_total_updates
@@ -39,7 +48,8 @@ while true; do
     # and network uptime, only checking once every 30 min for new updates
     while (( UPDATES == 0 )); do
         echo " None"
-        sleep 1800
+        sleep 1800 &
+        wait
         get_total_updates
     done
 done
